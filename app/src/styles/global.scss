@@ -1,0 +1,17 @@
+@import './theme.scss';
+@import './typography.scss';
+@import './elevation.scss';
+
+:root {
+  --border-radius: 4px;
+  --space-items: 8px;
+  --scrollbar-thumb-color-on-light: rgba(0,0,0, .35);
+  --scrollbar-thumb-color-on-dark: rgba(255,255,255, .35);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}

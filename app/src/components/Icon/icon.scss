@@ -1,0 +1,6 @@
+@import '../../styles/target.scss';
+#icon {
+  &.target {
+    @include target(8px, 8px)
+  }
+}

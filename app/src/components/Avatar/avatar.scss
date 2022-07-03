@@ -1,0 +1,17 @@
+#avatar {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: var(--parent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  i {
+    font-size: calc(var(--size) / 2);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--parent-bg-color);
+    text-transform: uppercase;
+  }
+}

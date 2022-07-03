@@ -1,0 +1,21 @@
+@import '../../styles/target.scss';
+
+button {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  border-color: none;
+  border-radius: var(--border-radius);
+  & {
+    @include target(0px, var(--border-radius));
+  }
+  &.sm {
+    height: 36px;
+  }
+  &.md {
+    height: 48px;
+  }
+  &.lg {
+    height: 56px;
+  }
+}

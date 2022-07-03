@@ -1,0 +1,10 @@
+section#content {
+  width: 100%;
+  min-height: 100%;
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+    gap: var(--main-padding);
+    align-content: flex-start;
+  }
+}

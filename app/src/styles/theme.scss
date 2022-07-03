@@ -1,0 +1,101 @@
+@import './color-palette.scss';
+$border-on-dark: rgba(black, 0.4);
+$border-on-light: rgba(black, 0.15);
+
+$theme: (
+	light: (
+		primary: (
+			bg-color: $deep-purple-600,
+			border-color: $border-on-dark,
+			color: white
+		),
+		secondary: (
+			bg-color: $grey-900,
+			border-color: $border-on-dark,
+			color: white
+		),
+		surface: (
+			bg-color: white,
+			border-color: $border-on-light,
+			color: rgba(black, 0.7),
+			border-color-input: rgba(black, .15)
+		),
+		background: (
+			bg-color: $grey-100,
+			border-color: $border-on-light,
+			color: rgba(black, 0.7)
+		),
+		success:  (
+			bg-color: $green-600,
+			border-color: $border-on-dark,
+			color: white
+		),
+		error: (
+			bg-color: $red-600,
+			border-color: $border-on-dark,
+			color: white
+		)
+	),
+	dark: (
+		primary: (
+			bg-color: $deep-purple-200,
+			border-color: $border-on-light,
+			color: black
+		),
+		secondary: (
+			bg-color: $grey-200,
+			border-color: $border-on-light,
+			color: rgba(black, 0.9)
+		),
+		surface: (
+			bg-color: $grey-800,
+			border-color: $border-on-dark,
+			color: rgba(white, 0.9),
+			border-color-input: rgba(white, .35)
+		),
+		background: (
+			bg-color: #3a3a3a,
+			border-color: $border-on-dark,
+			color: rgba(white, 0.9)
+		),
+		success:  (
+			bg-color: $green-300,
+			border-color: $border-on-light,
+			color: black
+		),
+		error: (
+			bg-color: $red-300,
+			border-color: $border-on-light,
+			color: black
+		)
+	)
+);
+
+@each $theme-name, $colors in $theme {
+	.theme-#{$theme-name} {
+		@each $color-name, $color-palettes in $colors {
+			@each $prop-name, $value in $color-palettes {
+				$hash-name: --#{$prop-name}-#{$color-name};
+				$hash-prop: --theme-#{$theme-name}-#{$prop-name}-#{$color-name};
+				#{$hash-name}: var(#{$hash-prop}, #{$value});
+			}
+			
+			.bg-#{$color-name} {
+				background-color: var(--bg-color-#{$color-name});
+				color: var(--color-#{$color-name});
+				border-color: var(--border-color-#{$color-name}) !important;
+				--parent-bg-color: var(--bg-color-#{$color-name});
+				--parent-color: var(--color-#{$color-name});
+				--parent-border-color: var(--border-color-#{$color-name});
+			}
+			.border-#{$color-name}, .color-#{$color-name} {
+				color: var(--bg-color-#{$color-name});
+				--parent-color: var(--bg-color-#{$color-name});
+			}
+			.border-#{$color-name} {
+				border: 1px solid var(--bg-color-#{$color-name});
+				--parent-border-color: var(--mdl-border-color-#{$color-name});
+			}
+		}
+	}
+}

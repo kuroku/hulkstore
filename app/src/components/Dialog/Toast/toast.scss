@@ -1,0 +1,18 @@
+#toast {
+  width: calc(100% - var(--space-items)*2);
+  height: 56px;
+  position: fixed;
+  bottom: var(--space-items);
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+  max-width: 720px;
+  border: 1px solid;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  align-items: center;
+  box-shadow: var(--elevation-4);
+}
