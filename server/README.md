@@ -1,33 +1,29 @@
-# Express TypeScript template
-
-# Pre-reqs
-
-- Install [Node.js](https://nodejs.org/en/)
-- Install [VS Code](https://code.visualstudio.com/)
-
 # Getting started
 
-- Clone the repository
+-   ingrese el comando:
+-   yarn seed:run
+-   para agregar productos de prueba a la base de datos
+-   es necesario tener instalado mongodb para que pueda levantarse el servido
 
 ```
-git clone https://github.com/greenroach/express-ts-template.git
+
 ```
 
-- Install dependencies
+-   Install dependencies
 
 ```
 cd <project_name>
 npm install
 ```
 
-- Build and run the project
+-   Build and run the project
 
 ```
 npm run build
 npm start
 ```
 
-Navigate to `http://localhost:3000`
+Navigate to `http://localhost:4000`
 
 ### Using the debugger in VS Code
 
@@ -40,11 +36,11 @@ In this file, you can tell VS Code exactly what you want to do:
 
 ```json
 {
-  "type": "node",
-  "request": "attach",
-  "name": "Attach by Process ID",
-  "processId": "${command:PickProcess}",
-  "protocol": "inspector"
+    "type": "node",
+    "request": "attach",
+    "name": "Attach by Process ID",
+    "processId": "${command:PickProcess}",
+    "protocol": "inspector"
 }
 ```
 
