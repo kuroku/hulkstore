@@ -110,7 +110,7 @@ export default function ModalLogin(props: ModalLoginProps) {
       </footer>
       <menu>
         <Button fullWidth variant='color' onClick={changeType}>
-          {type}
+          {type === "login" ? "Register" : "Login"}
         </Button>
         <Button fullWidth variant='bg' onClick={onSubmit}>
           enter

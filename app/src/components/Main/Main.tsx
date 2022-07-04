@@ -36,7 +36,7 @@ export const UiContext = createContext<UiContextProps>(defaultUi);
 export default function Main(props: MainProps) {
   const { children } = props;
   const [theme, setTheme] = useState<Themetype>(defaultUi.theme);
-  const [user, setUser] = useState<UserAuthResponse["user"]>();
+  const [user, setUser] = useState<UserAuthResponse["user"]>(defaultUi.user);
 
   const toogleTheme = useCallback(() => {
     const newTheme = theme === "light" ? "dark" : "light";
