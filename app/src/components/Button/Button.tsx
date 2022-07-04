@@ -7,6 +7,7 @@ export interface ButtonProps {
   size?: "sm" | "md" | "lg";
   variant?: "bg" | "border" | "color";
   color?: "primary" | "secondary" | "surface";
+  fullWidth?: boolean;
 }
 
 export default function Button(props: ButtonProps) {
@@ -16,11 +17,12 @@ export default function Button(props: ButtonProps) {
     size = "sm",
     variant = "bg",
     color = "primary",
+    fullWidth,
   } = props;
 
   const className = useMemo(() => {
-    return `${size} ${variant}-${color}`;
-  }, [size, variant, color]);
+    return `${size} ${variant}-${color} ${fullWidth ? "full-width" : ""}`;
+  }, [size, variant, color, fullWidth]);
 
   return (
     <button className={className} onClick={onClick}>

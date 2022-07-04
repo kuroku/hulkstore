@@ -6,13 +6,9 @@ import {
     findUserByEmailAndPassword,
     UserSchema,
 } from "../models/user";
+import { UserAuthResponse } from "../../types/response";
 
 const userRouter = Router();
-
-export interface UserAuthResponse {
-    user: UserSchema;
-    token: string;
-}
 
 userRouter.post(
     "/register",
@@ -39,7 +35,7 @@ userRouter.post(
 userRouter.post(
     "/login",
     body("email").isEmail().withMessage("email is invalid"),
-    body("password").isString().withMessage("email is invalid"),
+    body("password").isString().withMessage("password is invalid"),
     async (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {

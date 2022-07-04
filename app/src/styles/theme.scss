@@ -5,7 +5,7 @@ $border-on-light: rgba(black, 0.15);
 $theme: (
 	light: (
 		primary: (
-			bg-color: $deep-purple-600,
+			bg-color: $green-600,
 			border-color: $border-on-dark,
 			color: white
 		),
@@ -38,7 +38,7 @@ $theme: (
 	),
 	dark: (
 		primary: (
-			bg-color: $deep-purple-200,
+			bg-color: $green-200,
 			border-color: $border-on-light,
 			color: black
 		),

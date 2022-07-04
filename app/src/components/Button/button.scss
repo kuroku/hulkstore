@@ -6,6 +6,9 @@ button {
   border: none;
   border-color: none;
   border-radius: var(--border-radius);
+  &.full-width {
+    width: 100%
+  }
   & {
     @include target(0px, var(--border-radius));
   }
