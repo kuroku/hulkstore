@@ -4,7 +4,7 @@ para empezar el proyecto necesitamos aplicar los siguientes comandos:
 
 - cd app
 - yarn install
-  luego
+- luego
 - cd server
 - yarn install
 
@@ -14,7 +14,8 @@ para iniciar el backend es necesario correr la semillas
 
 - cd server
 - yarn seed:run
-  luego
+- luego
+- yarn test
 - yarn run build
 - yarn start
 
@@ -22,3 +23,4 @@ para iniciar el backend es necesario correr la semillas
 
 - cd app
 - yarn start
+- yarn test
