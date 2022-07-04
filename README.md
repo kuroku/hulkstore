@@ -24,3 +24,8 @@ para iniciar el backend es necesario correr la semillas
 - cd app
 - yarn start
 - yarn test
+
+## iniciar sesion
+
+-- email: hulkstore_master@gmail.com
+-- password: hulkstore

@@ -7,10 +7,10 @@ async function startSedd() {
     dbConnect();
 
     const userMasterSchema: UserSchema = {
-        name: "robert",
-        lastname: "montilla",
-        email: "master@gmail.com",
-        password: "test",
+        name: "hulk",
+        lastname: "store",
+        email: "hulkstore_master@gmail.com",
+        password: "hulkstore",
     };
 
     const userMaster = await createUser(userMasterSchema);
